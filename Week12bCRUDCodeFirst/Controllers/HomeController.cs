@@ -46,6 +46,15 @@ namespace Week12bCRUDCodeFirst.Controllers
             return View();
         }
 
+        [HttpGet]
+        public IActionResult GetEmployeeData()
+        {
+            var Emp = _db.Employees.ToList();
+            return View(Emp);
+        }
+
+
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
