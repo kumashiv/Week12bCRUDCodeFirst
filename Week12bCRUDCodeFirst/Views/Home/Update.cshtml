@@ -1,19 +1,12 @@
-﻿
-@{
-    ViewData["Title"] = "Update";
-}
-
-<h1>Update</h1>
-
-@model Week12bCRUDCodeFirst.Models.Employee
-
+﻿@model Week12bCRUDCodeFirst.Models.Employee
 @{
     ViewData["Title"] = "Update";
 }
 
 
-<form asp-controller="Home" asp-action="Create">
-    <h1>Create</h1>
+
+<form asp-controller="Home" asp-action="Update">
+    <h1>Update</h1>
 
     <label>First Name</label>
     <input type="text" asp-for="FirstName" />

@@ -63,22 +63,22 @@ namespace Week12bCRUDCodeFirst.Controllers
         }
 
 
-        //[HttpGet]
-        //public IActionResult Update(int id)     //Getting edit-able page with id
-        //{
-        //    var Emp = _db.Employees.FirstOrDefault(x => x.id == id);     // matching id with database id
+        [HttpGet]
+        public IActionResult Update(int id)     //Getting edit-able page with id
+        {
+            var Emp = _db.Employees.FirstOrDefault(x => x.id == id);     // matching id with database id
 
-        //    return View(Emp);
-        //}
+            return View(Emp);
+        }
 
-        //[HttpPost]
-        //public IActionResult Update(Employee obj)       // Saving edited page with information
-        //{
-        //    _db.Employees.Update(obj);
-        //    _db.SaveChanges();
-        //    //return View();
-        //    return RedirectToAction("GetEmployeeData");
-        //}
+        [HttpPost]
+        public IActionResult Update(Employee obj)       // Saving edited page with information
+        {
+            _db.Employees.Update(obj);
+            _db.SaveChanges();
+            //return View();
+            return RedirectToAction("GetEmployeeData");
+        }
 
 
 
